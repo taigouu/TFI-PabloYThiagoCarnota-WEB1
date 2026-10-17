@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 32px;
+    background-color: #1C3163;
+    color: white;
+    flex-wrap: wrap;
+}
+
+header img {
+    width: 90px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    margin-left: auto;
+    gap: 24px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav a.activo {
+    border-bottom: 3px solid #61aff9;
+    padding-bottom: 6px;
+}
