@@ -4,17 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dúotec | Servicio Técnico y Refrigeración.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Idiqlat:wght@200;300;400&family=Lora:ital,wght@0,400..700;1,400..700&family=Matemasie&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
 
   <body>
     <header>
-      <img src="imagenes/logoDuoTec.png" alt="Logo Dúo Tec" />
-      <div class="contenedorTitulo">
-        <p class="titulo">DÚOTEC</p>
-        <p class="subtitulo">Servicio Técnico y Refrigeración</p>
+      <div class="contenedorHeaderPrincipal">
+        <img src="imagenes/logoDuoTec.png" alt="Logo Dúo Tec" id="fotoLogo" />
+        <div class="contenedorTitulo">
+          <p class="tituloDuo">DÚOTEC</p>
+          <p class="subtitulo">Servicio Técnico y Refrigeración</p>
+        </div>
       </div>
-      <nav>
+      <nav class="links">
         <a href="index.html" class="activo" aria-current="page">Inicio</a>
         <a href="servicios.html">Servicios y Cobertura</a>
         <a href="contacto.html">Contacto</a>
@@ -40,45 +64,56 @@
               href="https://wa.me/5492664207109"
               id="consultarWhatsapp"
               target="_blank"
-              >Consultar por WhatsApp</a
             >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Consultar por WhatsApp
+            </a>
 
-            <a href="servicios.html" id="verServicios"> Ver servicios </a>
+            <a href="servicios.html" id="verServicios">Ver servicios</a>
           </div>
-          <p>Santa Rosa del Conlara, Merlo y alrededores.</p>
+          <p class="ubik">
+            <i class="fa-solid fa-location-dot"></i>
+            Santa Rosa del Conlara, Merlo y alrededores.
+          </p>
         </div>
       </section>
 
       <section class="servicios">
         <div class="textosSeccion2">
           <p class="infoChica">¿EN QUÉ PODEMOS AYUDARTE?</p>
-          <h2>Soluciones para cada equipo</h2>
+          <h2 class="textoPrincipal">Soluciones para cada equipo</h2>
         </div>
 
         <div class="contenedorSoluciones">
           <div class="tarjetaServicio">
+            <i class="fa-solid fa-snowflake"></i>
             <h3>Aires acondicionados</h3>
             <p>Instalación, mantenimiento y reparación.</p>
           </div>
           <div class="tarjetaServicio">
+            <i class="fa-solid fa-temperature-arrow-down"></i>
             <h3>Heladeras y freezers</h3>
             <p>Service y reparación de equipos domésticos y comerciales.</p>
           </div>
           <div class="tarjetaServicio">
+            <i class="fa-solid fa-shirt"></i>
             <h3>Lavarropas</h3>
             <p>Diagnóstico y reparación de todas las marcas.</p>
           </div>
           <div class="tarjetaServicio">
+            <i class="fa-solid fa-fan"></i>
             <h3>Cámaras frigoríficas</h3>
             <p>Instalación, mantenimiento y reparación</p>
           </div>
           <div class="tarjetaServicio">
+            <i class="fa-solid fa-utensils"></i>
             <h3>Refrigeración comercial</h3>
             <p>
               Heladeras exhibidoras, conservadoras y equipamiento gastronómico.
             </p>
           </div>
           <div class="tarjetaServicio">
+            <i class="fa-solid fa-car-side"></i>
             <h3>Aire automotor</h3>
             <p>Carga de gas.</p>
           </div>

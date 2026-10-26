@@ -29,9 +29,9 @@
 }
 
 
-
 body {
     margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 img {
@@ -50,11 +50,6 @@ header {
 
 }
 
-header img {
-    width: 90px;
-    height: auto;
-}
-
 header nav {
     display: flex;
     margin-left: auto;
@@ -71,6 +66,44 @@ header nav a.activo {
     padding-bottom: 6px;
 }
 
+header img {
+    width: 90px;
+    height: auto;
+}
+
+.contenedorHeaderPrincipal {
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#fotoLogo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.tituloDuo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 55px;
+    line-height: 1;
+    margin: 0;
+}
+
+.subtitulo {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
+}
+
+.links {
+    font-size: 20px;
+}
 
 p.refYServicio {
     margin-top: 0;
@@ -80,7 +113,7 @@ section.presentacion {
     margin: 0 auto;
     background-image: url("imagenes/FotoPrincipal.png");
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 850px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,25 +131,28 @@ section.presentacion {
     padding: 30px;
 }
 
+p.refSer {
+    margin-left: 15px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--texto-secundario);
+    font-weight: 900;
+}
+
 .presentacion h1 {
     color: var(--azul-titulos);
-    font-size: clamp(1.5rem, 15vw, 7rem);
+    font-size: clamp(1rem, 15vw, 6rem);
 
 }
 
 .presentacion .infoChica {
+    margin-left: 20px;
     color: var(--texto-secundario);
     max-width: 720px;
     font-size: clamp(1.5rem, 15vw, 2.5rem);
     margin-top: 10px;
 }
 
-p.refSer {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: rgba(1, 17, 72, 0.8);
-    font-weight: 900;
-}
 
 .textoPresentacion p,
 .textoPresentacion h1 {
@@ -125,12 +161,98 @@ p.refSer {
 }
 
 .botonesConsultas {
-    margin-top: 15px;
+    margin-top: 45px;
+}
+
+.botonesConsultas a {
+    font-size: 1.6rem;
+    padding: 15px;
+    border: 2.5px solid transparent;
+    border-radius: 10px;
+    text-decoration: none;
+
 }
 
 #consultarWhatsapp {
     background-color: #034aff;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+
+}
+
+#verServicios {
+    border-color: var(--azul-botones);
+    color: var(--azul-botones);
+}
+
+.ubik {
+    margin-top: 45px;
+    font-size: 25px;
+    color: var(--azul-oscuro);
+}
+
+
+.textosSeccion2 .infoChica {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--texto-secundario);
+
+}
+
+
+.textosSeccion2 h2 {
+
+    margin-top: 0px;
+    color: var(--azul-titulos);
+    font-size: 2.7rem;
+
+}
+
+
+.textosSeccion2 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.contenedorSoluciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+
+.tarjetaServicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blanco);
+    border: 1px solid var(--bordes);
+    border-radius: 12px;
+    padding: 30px;
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.tarjetaServicio h3 {
+    color: var(--azul-titulos);
+    font-size: 25px;
+}
+
+.tarjetaServicio p {
+    color: var(--texto-secundario);
+    font-size: 20px;
+
+}
+
+.tarjetaServicio i {
+    font-size: 70px;
+    color: var(--azul-botones);
 }
