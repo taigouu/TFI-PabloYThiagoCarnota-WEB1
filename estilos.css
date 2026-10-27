@@ -47,6 +47,9 @@ header {
     background-color: var(--azul-oscuro);
     color: white;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
 }
 
@@ -59,6 +62,11 @@ header nav {
 header nav a {
     color: white;
     text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+header nav a:hover {
+    transform: scale(1.05);
 }
 
 header nav a.activo {
@@ -72,7 +80,7 @@ header img {
 }
 
 .contenedorHeaderPrincipal {
-    margin-left: 60px;
+    margin-left: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -80,8 +88,8 @@ header img {
 }
 
 #fotoLogo {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     align-self: center;
     flex-shrink: 0;
@@ -89,14 +97,14 @@ header img {
 
 .tituloDuo {
     font-family: "Montserrat", sans-serif;
-    font-size: 55px;
+    font-size: 45px;
     line-height: 1;
     margin: 0;
 }
 
 .subtitulo {
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
     line-height: 1;
     margin: 0;
 }
@@ -133,7 +141,7 @@ section.presentacion {
 
 p.refSer {
     margin-left: 15px;
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: var(--texto-secundario);
     font-weight: 900;
@@ -148,15 +156,15 @@ p.refSer {
 .presentacion .infoChica {
     margin-left: 20px;
     color: var(--texto-secundario);
-    max-width: 720px;
-    font-size: clamp(1.5rem, 15vw, 2.5rem);
+    max-width: 600px;
+    font-size: clamp(1.5rem, 15vw, 2rem);
     margin-top: 10px;
 }
 
 
 .textoPresentacion p,
 .textoPresentacion h1 {
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 
@@ -173,10 +181,12 @@ p.refSer {
 
 }
 
-#consultarWhatsapp {
+.btnWhats {
     background-color: #034aff;
     color: white;
     margin-right: 10px;
+    border-radius: 8px;
+    font-size: 2rem;
 
 }
 
@@ -225,6 +235,7 @@ p.refSer {
     gap: 30px;
     max-width: 1500px;
     margin: 0 auto;
+    margin-bottom: 100px;
 
 }
 
@@ -239,20 +250,374 @@ p.refSer {
     padding: 30px;
     flex-basis: calc(33.33% - 20px);
     box-sizing: border-box;
+    padding-bottom: 40px;
+    transition: transform 0.2s ease;
 }
 
 .tarjetaServicio h3 {
     color: var(--azul-titulos);
     font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+
 }
 
 .tarjetaServicio p {
     color: var(--texto-secundario);
     font-size: 20px;
+    text-align: center;
+    max-width: 25ch;
+    margin-bottom: 20px;
 
 }
 
 .tarjetaServicio i {
-    font-size: 70px;
+    font-size: 60px;
     color: var(--azul-botones);
+
+
+}
+
+.tarjetaServicio:hover {
+    transform: scale(1.05);
+}
+
+.icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--fondo-iconos);
+    border-radius: 50%;
+}
+
+
+.trabajos {
+    background-color: var(--fondo-iconos);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+.contenedorSeccion3 {
+    background-color: var(--fondo-iconos);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+
+.textosSeccion3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.textosSeccion3 h2 {
+    color: var(--azul-titulos);
+    max-width: 10ch;
+    font-size: 6rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.textosSeccion3 .p1s3 {
+    font-size: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    opacity: 0.8;
+
+}
+
+.textosSeccion3 p {
+
+    color: var(--texto-secundario);
+    font-size: 1.7rem;
+    max-width: 25ch;
+    margin-top: 10px;
+    opacity: 1;
+}
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.carrusel img {
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+
+}
+
+.carrusel button {
+    background-color: var(--azul-oscuro);
+    border: 1px solid var(--blanco);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--blanco);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.carrusel button:hover {
+    transform: scale(1.08);
+}
+
+.visorCarrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.infoCarrusel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--texto-secundario);
+    font-size: 1rem;
+}
+
+.infoCarrusel p {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+#contadorCarrusel {
+    font-weight: 600;
+    color: var(--azul-oscuro);
+}
+
+.cobertura {
+    background-color: var(--blanco);
+    background-image: url('imagenes/localidadesInicio.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 60%;
+    width: auto;
+
+}
+
+.contenedorSeccion4 {
+    max-width: 1200px;
+    margin-left: 50px;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.textosSeccion4 {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.etiquetaCobertura {
+    color: var(--texto-secundario);
+    font-size: 1rem;
+    max-width: 25ch;
+    margin-top: 10px;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.contenedorSeccion4 h2 {
+    color: var(--azul-titulos);
+    font-size: 3rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.descripcionCobertura {
+    color: var(--azul-titulos);
+    font-size: 1.4rem;
+    margin-top: 15px;
+    opacity: 1;
+    margin-bottom: 45px;
+}
+
+.descripcionCobertura strong {
+    color: var(--azul-botones);
+
+}
+
+.bloqueBoton a {
+    margin-top: 45px;
+    font-size: 1.6rem;
+    padding: 15px;
+    border: 2.5px solid var(--azul-botones);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btnVerCobertura {
+    border-color: var(--azul-oscuro);
+    color: var(--blanco);
+    background-color: var(--azul-botones);
+}
+
+.btnVerCobertura #flechaCober {
+    transition: 0.2s ease;
+}
+
+.btnVerCobertura:hover #flechaCober {
+    transform: scale(1.09) translateX(3px);
+}
+
+#flechaCober {
+    font-size: 15px;
+}
+
+.contenedorFooter {
+    margin-top: 100px;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    padding: 40px 7%;
+}
+
+
+.textosFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-left: 0;
+    transform: none;
+    flex: 1;
+    min-width: 0;
+}
+
+.textosFooter p#contactanos {
+    margin: 0 0 8px;
+    color: var(--blanco);
+    opacity: 0.85;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.txtPadre {
+    margin: 0 0 10px;
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+    line-height: 1.2;
+}
+
+.txt {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0 0 4px;
+    opacity: 0.9;
+}
+
+
+.contenedorLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.contenedorBotones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contenedorFooter a {
+    text-decoration: none;
+
+}
+
+#consultarWhatsappFooter {
+    padding: 16px 18px;
+    font-size: 1.15rem;
+    border: 1px solid var(--azul-titulos);
+    border-radius: 15px;
+    background-color: #034aff;
+    color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease;
+}
+
+#consultarWhatsappFooter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    background-color: #0056cc;
+
+}
+
+#consultarInsta,
+#consultarFace {
+    padding: 16px 18px;
+    font-size: 1.15rem;
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    border-radius: 14px;
+    transition: all 0.2s ease;
+
+}
+
+#consultarInsta:hover,
+#consultarFace:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--celeste);
+}
+
+
+#prepararConsulta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--blanco);
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#flecha {
+    transition: transform 0.2s ease;
+}
+
+#prepararConsulta:hover #flecha {
+    transform: scale(1.2) translateX(5px);
+}
+
+.pieFooter {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 18px 7%;
+    text-align: right;
+}
+
+.pieFooter p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
