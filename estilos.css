@@ -721,7 +721,7 @@ p.refSer {
     display: flex;
     background:
         linear-gradient(90deg, rgba(6, 27, 97, 0.88), rgba(6, 27, 97, 0.15)),
-        url("imagenes/soluciones1img.jpg") center / cover no-repeat;
+        url("imagenes/instalaciónExterior1.jpg") center / cover no-repeat;
     border: 1px solid var(--bordes);
     border-radius: 12px;
     overflow: hidden;
@@ -733,7 +733,7 @@ p.refSer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 25px;
+    padding: 35px;
     color: var(--blanco);
 }
 
@@ -758,7 +758,7 @@ p.refSer {
 }
 
 .tarjetaPrincipal p {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     line-height: 1.4;
     margin: 0;
 }
@@ -774,7 +774,7 @@ p.refSer {
 .tarjetaGeneral {
     grid-column: span 3;
     min-width: 0;
-    padding: 12px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -813,14 +813,108 @@ p.refSer {
 .tarjetaGeneral h1 {
     font-family: "Montserrat", sans-serif;
     color: var(--azul-titulos);
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     margin: 0 0 5px;
 }
 
 .tarjetaGeneral p {
     color: var(--texto-secundario);
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.3;
     margin: 0;
+}
+
+
+.contenedorLoc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contIzq {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.txtIzq h2 {
+    font-size: 3rem;
+    color: var(--azul-titulos);
+    max-width: 17ch;
+    margin-bottom: 10px;
+}
+
+.txtIzq p {
+    font-size: 1.5rem;
+    color: var(--texto-secundario);
+    max-width: 50ch;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+
+.listaLoc {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background-color: var(--fondo-celeste);
+    padding: 10px;
+    border: 1px solid var(--bordes);
+    border-radius: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.textosLoc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px;
+}
+
+.unLista {
+    margin-top: 0px;
+}
+
+.textosLoc h3 {
+    font-size: 1.7rem;
+    color: var(--azul-titulos);
+}
+
+.textosLoc i {
+    color: var(--azul-subtitulos);
+    font-size: 1.5rem;
+}
+
+.unLista ul {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+
+.unLista li {
+    font-weight: 550;
+    color: var(--azul-oscuro);
+}
+
+.txtFinalLoc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0px;
+
+}
+
+.txtFinalLoc i {
+    color: var(--azul-subtitulos);
+    font-size: 2rem;
+}
+
+.txtFinalLoc p {
+    font-size: 1.3rem;
+    max-width: 42ch;
 }
