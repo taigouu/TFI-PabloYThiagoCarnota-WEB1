@@ -1,43 +1,42 @@
 /* declaración de variables para los colores principales */
 :root {
-    --azul-oscuro: #19376E;
+    --azul-oscuro: #19376e;
     /*Header y footer*/
 
-    --azul-titulos: #061B61;
+    --azul-titulos: #061b61;
     /*Titulos principales*/
 
     --azul-subtitulos: #2687d1;
     /* Subtítulos */
 
-    --azul-botones: #006CFD;
+    --azul-botones: #006cfd;
     /*Botones principales*/
 
-    --celeste: #17B8F8;
+    --celeste: #17b8f8;
     /*Detalles e indicadores*/
 
-    --texto-secundario: #455A7A;
+    --texto-secundario: #455a7a;
     /*Textos secundarios*/
 
-    --fondo-celeste: #ECF6FE;
+    --fondo-celeste: #ecf6fe;
     /*Fondos de secciones*/
 
-    --fondo-iconos: #E8F4FF;
+    --fondo-iconos: #e8f4ff;
     /*Fondos de íconos*/
 
     --bordes: #c9e3ff;
     /*Bordes de tarjetas*/
 
-    --blanco: #FFFFFF;
+    --blanco: #ffffff;
     /*Tarjetas y fondos*/
 }
-
 
 body {
     margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 main {
@@ -60,7 +59,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
 
 header nav {
@@ -94,7 +92,6 @@ header img {
     display: flex;
     align-items: center;
     gap: 20px;
-
 }
 
 #fotoLogo {
@@ -141,8 +138,6 @@ section.presentacion {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-
 }
 
 .presentacion .contenedor {
@@ -160,7 +155,6 @@ p.refSer {
 .presentacion h1 {
     color: var(--azul-titulos);
     font-size: clamp(1rem, 15vw, 6rem);
-
 }
 
 .presentacion .infoChica {
@@ -170,7 +164,6 @@ p.refSer {
     font-size: clamp(1.5rem, 15vw, 2rem);
     margin-top: 10px;
 }
-
 
 .textoPresentacion p,
 .textoPresentacion h1 {
@@ -188,7 +181,6 @@ p.refSer {
     border: 2.5px solid transparent;
     border-radius: 10px;
     text-decoration: none;
-
 }
 
 .btnWhats {
@@ -197,7 +189,6 @@ p.refSer {
     margin-right: 10px;
     border-radius: 8px;
     font-size: 2rem;
-
 }
 
 #verServicios {
@@ -211,24 +202,18 @@ p.refSer {
     color: var(--azul-oscuro);
 }
 
-
 .textosSeccion2 .infoChica {
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 10px;
     color: var(--texto-secundario);
-
 }
 
-
 .textosSeccion2 h2 {
-
     margin-top: 0px;
     color: var(--azul-titulos);
     font-size: 2.7rem;
-
 }
-
 
 .textosSeccion2 {
     margin-top: 50px;
@@ -246,7 +231,6 @@ p.refSer {
     max-width: 1500px;
     margin: 0 auto;
     margin-bottom: 100px;
-
 }
 
 .tarjetaServicio {
@@ -269,7 +253,6 @@ p.refSer {
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 0px;
-
 }
 
 .tarjetaServicio p {
@@ -278,14 +261,11 @@ p.refSer {
     text-align: center;
     max-width: 25ch;
     margin-bottom: 20px;
-
 }
 
 .tarjetaServicio i {
     font-size: 60px;
     color: var(--azul-botones);
-
-
 }
 
 .tarjetaServicio:hover {
@@ -302,13 +282,11 @@ p.refSer {
     border-radius: 50%;
 }
 
-
 .trabajos {
     background-color: var(--fondo-iconos);
     width: 100%;
     margin-bottom: 15px;
 }
-
 
 .contenedorSeccion3 {
     background-color: var(--fondo-iconos);
@@ -320,14 +298,11 @@ p.refSer {
     padding: 60px 20px;
 }
 
-
 .textosSeccion3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
-
 
 .textosSeccion3 h2 {
     color: var(--azul-titulos);
@@ -343,11 +318,9 @@ p.refSer {
     margin-bottom: 10px;
     font-weight: 600;
     opacity: 0.8;
-
 }
 
 .textosSeccion3 p {
-
     color: var(--texto-secundario);
     font-size: 1.7rem;
     max-width: 25ch;
@@ -366,7 +339,6 @@ p.refSer {
     height: 500px;
     object-fit: cover;
     border-radius: 16px;
-
 }
 
 .carrusel button {
@@ -417,12 +389,11 @@ p.refSer {
 
 .cobertura {
     background-color: var(--blanco);
-    background-image: url('imagenes/localidadesInicio.png');
+    background-image: url("imagenes/localidadesInicio.png");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 60%;
     width: auto;
-
 }
 
 .contenedorSeccion4 {
@@ -466,7 +437,6 @@ p.refSer {
 
 .descripcionCobertura strong {
     color: var(--azul-botones);
-
 }
 
 .bloqueBoton a {
@@ -509,7 +479,6 @@ p.refSer {
     padding: 40px 7%;
 }
 
-
 .textosFooter {
     display: flex;
     flex-direction: column;
@@ -542,7 +511,6 @@ p.refSer {
     opacity: 0.9;
 }
 
-
 .contenedorLinks {
     display: flex;
     flex-direction: column;
@@ -560,7 +528,6 @@ p.refSer {
 
 .contenedorFooter a {
     text-decoration: none;
-
 }
 
 #consultarWhatsappFooter {
@@ -579,7 +546,6 @@ p.refSer {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     background-color: #0056cc;
-
 }
 
 #consultarInsta,
@@ -590,7 +556,6 @@ p.refSer {
     border: 1px solid var(--blanco);
     border-radius: 14px;
     transition: all 0.2s ease;
-
 }
 
 #consultarInsta:hover,
@@ -599,7 +564,6 @@ p.refSer {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: var(--celeste);
 }
-
 
 #prepararConsulta {
     display: inline-flex;
@@ -641,6 +605,7 @@ p.refSer {
     align-items: center;
     background-color: var(--fondo-celeste);
     padding: 60px 5%;
+    padding-top: 90px;
     gap: 40px;
 }
 
@@ -664,7 +629,6 @@ p.refSer {
     align-items: center;
     text-align: center;
     flex: 1;
-
 }
 
 .textos h1 {
@@ -672,13 +636,12 @@ p.refSer {
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 0px;
-    text-align: start;
-
+    text-align: center;
 }
 
 #azulcito {
     margin-top: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: var(--azul-subtitulos);
 }
 
@@ -688,6 +651,7 @@ p.refSer {
     max-width: 600px;
     margin: 0 auto 30px auto;
     text-align: start;
+    margin-left: 20px;
 }
 
 .iconos-beneficios {
@@ -714,4 +678,149 @@ p.refSer {
     text-align: left;
     display: block;
     line-height: 1.3;
+}
+
+.serviciosLista {
+    background-color: var(--blanco);
+    padding: 25px 5% 35px;
+    margin-top: 100px;
+}
+
+.contenedorServiciosLista {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.textosServicios {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.textosServicios h1 {
+    color: var(--azul-titulos);
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    margin: 0 0 8px;
+}
+
+.textosServicios p {
+    color: var(--texto-secundario);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.tarjetaAire {
+    min-width: 0;
+    display: flex;
+    background:
+        linear-gradient(90deg, rgba(6, 27, 97, 0.88), rgba(6, 27, 97, 0.15)),
+        url("imagenes/soluciones1img.jpg") center / cover no-repeat;
+    border: 1px solid var(--bordes);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(6, 27, 97, 0.12);
+}
+
+.tarjetaPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px;
+    color: var(--blanco);
+}
+
+.tarjetaPrincipal i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--fondo-iconos);
+    color: var(--azul-oscuro);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.tarjetaPrincipal h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+
+.tarjetaPrincipal p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.tarjetasGenerales {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
+    gap: 12px;
+    min-width: 0;
+}
+
+.tarjetaGeneral {
+    grid-column: span 3;
+    min-width: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--blanco);
+    border: 1px solid var(--bordes);
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(6, 27, 97, 0.1);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tarjetaGeneral:nth-child(n + 3) {
+    grid-column: span 2;
+}
+
+.tarjetaGeneral:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(6, 27, 97, 0.15);
+}
+
+.tarjetaGeneral i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    background-color: var(--fondo-iconos);
+    color: var(--azul-oscuro);
+    font-size: 20px;
+}
+
+.tarjetaGeneral h1 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--azul-titulos);
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
+}
+
+.tarjetaGeneral p {
+    color: var(--texto-secundario);
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin: 0;
 }
