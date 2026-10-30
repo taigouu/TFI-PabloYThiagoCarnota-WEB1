@@ -720,6 +720,12 @@ p.refSer {
     color: var(--azul-botones);
     font-size: 24px;
     flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.item-beneficio:hover i {
+    transform: scale(1.08);
+
 }
 
 .item-beneficio span {
