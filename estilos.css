@@ -467,7 +467,7 @@ p.refSer {
 }
 
 .contenedorFooter {
-    margin-top: 100px;
+    margin-top: 0px;
     background-color: var(--azul-oscuro);
     color: var(--blanco);
 
@@ -599,15 +599,60 @@ p.refSer {
 /* ========================================= */
 /*         SERVICIOS Y COBERTURA       */
 /* ========================================= */
+
 .hero-servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 112px);
+    padding: 30px 5%;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.tituloMarca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: var(--azul-titulos);
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.tituloMarca::before,
+.tituloMarca::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+}
+
+.tituloMarca::before {
+    background: linear-gradient(to left, var(--azul-oscuro), transparent);
+}
+
+.tituloMarca::after {
+    background: linear-gradient(to right, var(--azul-oscuro), transparent);
+}
+
+.contenido-hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--fondo-celeste);
-    padding: 60px 5%;
-    padding-top: 90px;
     gap: 40px;
+    width: 100%;
 }
+
 
 .img-lateral {
     width: 500px;
@@ -629,13 +674,16 @@ p.refSer {
     align-items: center;
     text-align: center;
     flex: 1;
+    justify-content: flex-start;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .textos h1 {
     color: var(--azul-titulos);
     font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 0px;
+    line-height: 1.25;
+    margin: 0 0 25px;
     text-align: center;
 }
 
@@ -649,15 +697,15 @@ p.refSer {
     color: var(--texto-secundario);
     font-size: 1.5rem;
     max-width: 600px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
     text-align: start;
-    margin-left: 20px;
 }
 
 .iconos-beneficios {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-top: 10px;
 }
 
 .item-beneficio {
@@ -683,12 +731,13 @@ p.refSer {
 .serviciosLista {
     background-color: var(--blanco);
     padding: 25px 5% 35px;
-    margin-top: 100px;
+    margin-top: 0;
 }
 
 .contenedorServiciosLista {
     max-width: 1500px;
     margin: 0 auto;
+    min-height: 700px;
 }
 
 .textosServicios {
@@ -714,6 +763,7 @@ p.refSer {
     grid-template-columns: 1fr 2fr;
     gap: 15px;
     align-items: stretch;
+    min-height: 520px;
 }
 
 .tarjetaAire {
@@ -726,6 +776,17 @@ p.refSer {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 3px 8px rgba(6, 27, 97, 0.12);
+}
+
+.tarjetaAire {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tarjetaAire:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(6, 27, 97, 0.2);
 }
 
 .tarjetaPrincipal {
@@ -752,21 +813,21 @@ p.refSer {
 
 .tarjetaPrincipal h2 {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 1.2;
     margin: 0 0 10px;
 }
 
 .tarjetaPrincipal p {
-    font-size: 1.3rem;
-    line-height: 1.4;
+    font-size: 1.4rem;
+    line-height: 1.5;
     margin: 0;
 }
 
 .tarjetasGenerales {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 12px;
     min-width: 0;
 }
@@ -774,11 +835,11 @@ p.refSer {
 .tarjetaGeneral {
     grid-column: span 3;
     min-width: 0;
-    padding: 25px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--blanco);
     border: 1px solid var(--bordes);
     border-radius: 12px;
@@ -801,41 +862,62 @@ p.refSer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    margin-bottom: 12px;
     border-radius: 50%;
     background-color: var(--fondo-iconos);
     color: var(--azul-oscuro);
-    font-size: 20px;
 }
 
 .tarjetaGeneral h1 {
     font-family: "Montserrat", sans-serif;
     color: var(--azul-titulos);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.2;
-    margin: 0 0 5px;
+    margin: 0 0 8px;
 }
 
 .tarjetaGeneral p {
     color: var(--texto-secundario);
-    font-size: 1rem;
-    line-height: 1.3;
+    font-size: 1.1rem;
+    line-height: 1.4;
     margin: 0;
 }
 
 
 .contenedorLoc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: stretch;
+    min-height: 650px;
+    background-color: rgb(208, 228, 255);
+    margin-bottom: 0px;
 }
 
 .contIzq {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 25px;
+    margin-left: 60px;
+}
+
+.contDer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-self: stretch;
+}
+
+.contDer img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    transform: none;
 }
 
 .txtIzq h2 {
@@ -864,6 +946,7 @@ p.refSer {
     border-radius: 12px;
     margin-top: 0px;
     margin-bottom: 0px;
+    max-width: 700px;
 }
 
 
@@ -885,7 +968,8 @@ p.refSer {
 
 .textosLoc i {
     color: var(--azul-subtitulos);
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-right: 10px;
 }
 
 .unLista ul {
