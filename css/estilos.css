@@ -1007,6 +1007,11 @@ p.refSer {
 /*        PÁGINA DE CONTACTO           */
 /* ========================================= */
 
+
+/* =========================================*/
+/*        PÁGINA DE CONTACTO                */
+/* ========================================= */
+
 .seccionContacto {
     display: flex;
     justify-content: center;
@@ -1041,7 +1046,7 @@ p.refSer {
 
 .infoContacto h1 {
     color: var(--azul-titulos);
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -1054,26 +1059,44 @@ p.refSer {
     max-width: 35ch;
 }
 
+/* TARJETAS DE CONTACTO */
+
 .tarjetasContenedor {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 40px;
 }
 
 .tarjetasContacto {
     display: flex;
     gap: 20px;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tarjetasContacto:hover {
+    transform: translateX(5px);
+    background-color: rgba(38, 135, 209, 0.06);
+}
+
+.tarjetasContacto:focus-visible {
+    outline: 3px solid var(--azul-botones);
+    outline-offset: 5px;
 }
 
 .tarjetasContacto h3 {
     color: var(--azul-titulos);
+    margin: 0;
 }
 
 .tarjetasContacto .txt p {
     font-size: 1rem;
-    margin: 5px 0 0;
+    margin: 2px 0 0;
 }
 
 .tarjetasContacto i {
@@ -1086,23 +1109,91 @@ p.refSer {
     font-size: 1.6rem;
 }
 
-.iconos {
+/* ÍCONOS GENERALES */
+
+.panelContacto .icono {
+    width: 94px;
+    height: 60px;
+    flex: 0 0 94px;
     display: flex;
-    gap: 5px;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+}
+
+/* Círculos de WhatsApp y teléfono */
+
+.panelContacto .icono:not(.iconoRedes) {
+    background-color: transparent;
+    border-radius: 0;
+    position: relative;
+}
+
+.panelContacto .icono:not(.iconoRedes)::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--bordes);
+}
+
+.panelContacto .icono:not(.iconoRedes) i {
+    position: relative;
+    z-index: 1;
+}
+
+/* REDES SOCIALES */
+
+.panelContacto .iconoRedes {
+    width: 94px;
+    height: 60px;
+    flex-basis: 94px;
+    border-radius: 30px;
+    background-color: var(--bordes);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     padding: 5px;
     box-sizing: border-box;
 }
 
-.panelContacto .iconos i {
+.panelContacto .iconoRedes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.panelContacto .iconoRedes a i {
     font-size: 1.3rem;
 }
 
-.panelContacto .icono {
-    width: 60px;
-    height: 60px;
+.panelContacto .iconoRedes a:hover {
+    background-color: rgba(38, 135, 209, 0.2);
+    transform: scale(1.08);
 }
+
+.panelContacto .iconoRedes a:first-child {
+    position: relative;
+}
+
+.panelContacto .iconoRedes a:first-child::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    height: 25px;
+    width: 1px;
+    background-color: rgba(38, 135, 209, 0.4);
+}
+
+/* FORMULARIO */
 
 .formularioContacto {
     border: 3px solid rgba(255, 255, 255, 0.7);
@@ -1113,7 +1204,7 @@ p.refSer {
 
 .formularioContacto h2 {
     color: var(--azul-titulos);
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 .formularioContacto p {
