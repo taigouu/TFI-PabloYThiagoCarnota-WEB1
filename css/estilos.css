@@ -95,8 +95,8 @@ header img {
 }
 
 #fotoLogo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     align-self: center;
     flex-shrink: 0;
@@ -126,7 +126,7 @@ p.refYServicio {
 
 section.presentacion {
     margin: 0 auto;
-    background-image: url("imagenes/FotoPrincipal.png");
+    background-image: url("../imagenes/FotoPrincipal.png");
     width: 100%;
     height: 850px;
     background-size: cover;
@@ -278,7 +278,7 @@ p.refSer {
     align-items: center;
     width: 100px;
     height: 100px;
-    background-color: var(--fondo-iconos);
+    background-color: var(--bordes);
     border-radius: 50%;
 }
 
@@ -389,7 +389,7 @@ p.refSer {
 
 .cobertura {
     background-color: var(--blanco);
-    background-image: url("imagenes/localidadesInicio.png");
+    background-image: url("../imagenes/localidadesInicio.png");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 60%;
@@ -653,7 +653,6 @@ p.refSer {
     width: 100%;
 }
 
-
 .img-lateral {
     width: 500px;
     height: 500px;
@@ -725,7 +724,6 @@ p.refSer {
 
 .item-beneficio:hover i {
     transform: scale(1.08);
-
 }
 
 .item-beneficio span {
@@ -777,7 +775,7 @@ p.refSer {
     display: flex;
     background:
         linear-gradient(90deg, rgba(6, 27, 97, 0.88), rgba(6, 27, 97, 0.15)),
-        url("imagenes/instalaciónExterior1.jpg") center / cover no-repeat;
+        url("../imagenes/instalaciónExterior1.jpg") center / cover no-repeat;
     border: 1px solid var(--bordes);
     border-radius: 12px;
     overflow: hidden;
@@ -892,7 +890,6 @@ p.refSer {
     margin: 0;
 }
 
-
 .contenedorLoc {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -941,7 +938,6 @@ p.refSer {
     margin-bottom: 15px;
 }
 
-
 .listaLoc {
     display: flex;
     flex-direction: column;
@@ -954,7 +950,6 @@ p.refSer {
     margin-bottom: 0px;
     max-width: 700px;
 }
-
 
 .textosLoc {
     display: flex;
@@ -996,7 +991,6 @@ p.refSer {
     align-items: center;
     gap: 10px;
     margin-top: 0px;
-
 }
 
 .txtFinalLoc i {
@@ -1007,4 +1001,209 @@ p.refSer {
 .txtFinalLoc p {
     font-size: 1.3rem;
     max-width: 42ch;
+}
+
+/* =========================================*/
+/*        PÁGINA DE CONTACTO           */
+/* ========================================= */
+
+.seccionContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 86px);
+    padding: 35px 5%;
+    box-sizing: border-box;
+    background-image: url("../imagenes/fondoContacto2.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.panelContacto {
+    background-color: var(--fondo-celeste);
+    display: grid;
+    grid-template-columns: 0.65fr 1fr;
+    width: 100%;
+    max-width: 1280px;
+    padding: 28px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    gap: 70px;
+}
+
+#contacto {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.infoContacto h1 {
+    color: var(--azul-titulos);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    max-width: 12ch;
+}
+
+.infoContacto p {
+    color: var(--texto-secundario);
+    font-size: 1.1rem;
+    max-width: 35ch;
+}
+
+.tarjetasContenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.tarjetasContacto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.tarjetasContacto h3 {
+    color: var(--azul-titulos);
+}
+
+.tarjetasContacto .txt p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+}
+
+.tarjetasContacto i {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+}
+
+.tarjetasContacto .fa-phone,
+.tarjetasContacto .fa-envelope {
+    font-size: 1.6rem;
+}
+
+.iconos {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.panelContacto .iconos i {
+    font-size: 1.3rem;
+}
+
+.panelContacto .icono {
+    width: 60px;
+    height: 60px;
+}
+
+.formularioContacto {
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.formularioContacto h2 {
+    color: var(--azul-titulos);
+    font-size: 1.6rem;
+}
+
+.formularioContacto p {
+    color: var(--texto-secundario);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.formularioContacto label {
+    color: var(--azul-titulos);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#formContacto {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 14px;
+    align-content: start;
+}
+
+#formContacto>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.descripcion,
+.botonEnviar {
+    grid-column: span 2;
+}
+
+#formContacto input,
+#formContacto select,
+#formContacto textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--bordes);
+    border-radius: 6px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.95rem;
+}
+
+#formContacto input:focus,
+#formContacto select:focus,
+#formContacto textarea:focus {
+    outline: none;
+    border-color: var(--azul-botones);
+    box-shadow: 0 0 0 2px rgba(0, 108, 253, 0.15);
+}
+
+#formContacto input::placeholder,
+#formContacto textarea::placeholder {
+    color: #8ba9cc;
+    opacity: 0.9;
+    font-size: 0.85rem;
+}
+
+#formContacto select:invalid {
+    color: #8ba9cc;
+}
+
+#formContacto select option {
+    color: #000;
+}
+
+#formContacto select:valid {
+    color: #000;
+}
+
+#formContacto textarea {
+    resize: vertical;
+    min-height: 65px;
+}
+
+.botonEnviar {
+    background-color: var(--azul-botones);
+    color: var(--blanco);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0;
+}
+
+.botonEnviar:hover {
+    background-color: var(--azul-oscuro);
 }
