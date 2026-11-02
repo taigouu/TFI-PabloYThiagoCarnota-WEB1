@@ -1449,3 +1449,280 @@ p.refSer {
 .formularioContacto {
     scroll-margin-top: 120px;
 }
+
+/* RESPONSIVE INICIO */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .contenedorHeaderPrincipal {
+        margin-left: 0;
+        gap: 12px;
+    }
+
+    #fotoLogo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tituloDuo {
+        font-size: 32px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+    }
+
+    .links {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .presentacion {
+        height: auto;
+        min-height: 600px;
+        background-position: 65% center;
+    }
+
+    .presentacion .contenedor {
+        padding: 30px 20px;
+    }
+
+    .presentacion h1 {
+        font-size: clamp(2.5rem, 9vw, 4rem);
+        color: var(--blanco);
+    }
+
+    .presentacion .infoChica {
+        font-size: 1.2rem;
+        margin-left: 0;
+        color: var(--bordes);
+    }
+
+    p.refSer {
+        margin-left: 0;
+        font-size: 0.9rem;
+        color: var(--bordes);
+    }
+
+    .botonesConsultas {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .botonesConsultas a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .btnWhats {
+        margin-right: 0;
+    }
+
+    #verServicios {
+        color: var(--bordes);
+        border-color: var(--bordes);
+    }
+
+    .ubik {
+        font-size: 1rem;
+        margin-top: 25px;
+        color: var(--fondo-celeste);
+    }
+
+    .textosSeccion2 {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .textosSeccion2 h2 {
+        font-size: 2rem;
+    }
+
+    .contenedorSoluciones {
+        padding: 0 20px;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .tarjetaServicio {
+        flex-basis: 100%;
+    }
+
+    .tarjetaServicio h3 {
+        font-size: 1.2rem;
+    }
+
+    .tarjetaServicio p {
+        font-size: 0.9rem;
+    }
+
+    .contenedorSeccion3 {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+        margin-bottom: 0px;
+    }
+
+    .textosSeccion3 h2 {
+        font-size: 3rem;
+        max-width: none;
+    }
+
+    .textosSeccion3 p {
+        font-size: 1.1rem;
+    }
+
+    .carrusel {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .visorCarrusel {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .contenedorImagenes {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2 / 1;
+    }
+
+    .carrusel button {
+        flex-shrink: 0;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .infoCarrusel {
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+
+    .infoCarrusel p {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    .cobertura {
+        background-image: none;
+        background-color: var(--bordes);
+    }
+
+    .contenedorSeccion4 {
+        margin-left: 0;
+        padding: 50px 20px;
+        margin-top: 0px;
+    }
+
+    .contenedorSeccion4 h2 {
+        font-size: 2rem;
+    }
+
+    .descripcionCobertura {
+        font-size: 1.1rem;
+    }
+
+    .bloqueBoton a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .contenedorFooter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 35px 20px;
+    }
+
+    .contenedorLinks {
+        width: 100%;
+    }
+
+    .contenedorBotones {
+        flex-wrap: wrap;
+    }
+
+    .contenedorFooter a {
+        font-size: 1rem;
+    }
+
+    .pieFooter {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    section.presentacion {
+        height: auto;
+        min-height: 600px;
+        background-position: 70% center;
+        position: relative;
+    }
+
+    section.presentacion::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg,
+                rgba(6, 27, 97, 0.92) 0%,
+                rgba(6, 27, 97, 0.75) 55%,
+                rgba(6, 27, 97, 0.25) 100%);
+    }
+
+    section.presentacion .contenedor {
+        position: relative;
+        z-index: 1;
+    }
+
+    .contenedorSoluciones {
+        gap: 14px;
+    }
+
+    .tarjetaServicio {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+
+    .tarjetaServicio h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .tarjetaServicio p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .carrusel {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .contenedorImagenes {
+        width: 100%;
+        aspect-ratio: 1.6 / 1;
+    }
+
+    .carrusel button {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+
+    .trabajos {
+        margin-bottom: 0;
+    }
+}
