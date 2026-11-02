@@ -82,15 +82,47 @@ formulario.addEventListener("submit", (evento) => {
 
   //corroborar si el formulario es válido y enviar los datos
   if (formularioValido) {
-    //creacion de variables y asignacion de valores del formulario:
+    const mensajeWhatsapp =
+      "Hola, soy " +
+      nombre.value +
+      ". Quería realizar una consulta por el siguiente servicio:\n\n" +
+      "_*Equipo:*_ " +
+      equipo.options[equipo.selectedIndex].text +
+      "\n" +
+      "_*Servicio:*_ " +
+      servicio.options[servicio.selectedIndex].text +
+      "\n" +
+      "_*Localidad:*_ " +
+      localidad.value +
+      "\n" +
+      "_*Descripción:*_ " +
+      descripcion.value +
+      "\n\n" +
+      "¡Desde ya, muchas gracias!";
+
+    const mensajeCodificado = encodeURIComponent(mensajeWhatsapp);
+
+    const enlaceWhatsApp =
+      "https://wa.me/5492664207109?text=" + mensajeCodificado;
+
+    //creacion de variables y asignacion de valores del formulario
+    const datosConsulta = {
+      nombre: nombre.value,
+      correo: correo.value,
+      telefono: telefono.value,
+      localidad: localidad.value,
+      equipo: equipo.value,
+      servicio: servicio.value,
+      descripcion: descripcion.value,
+    };
 
     const resumen = document.createElement("div");
     resumen.classList.add("resumenConsulta");
 
     const tituloResumen = document.createElement("h3");
     tituloResumen.textContent = "¡Consulta preparada correctamente!";
-
     resumen.appendChild(tituloResumen);
+
     const parrafoNombre = document.createElement("p");
     parrafoNombre.textContent = "Nombre: " + nombre.value;
     resumen.appendChild(parrafoNombre);
@@ -121,12 +153,59 @@ formulario.addEventListener("submit", (evento) => {
     parrafoDescripcion.textContent = "Descripción: " + descripcion.value;
     resumen.appendChild(parrafoDescripcion);
 
+    const botonWhatsApp = document.createElement("a");
+    botonWhatsApp.href = enlaceWhatsApp;
+    botonWhatsApp.target = "_blank";
+    botonWhatsApp.rel = "noopener noreferrer";
+    botonWhatsApp.classList.add("botonWhatsApp");
+    botonWhatsApp.innerHTML =
+      '<i class="fa-brands fa-whatsapp"></i> Enviar consulta por WhatsApp';
+    resumen.appendChild(botonWhatsApp);
+
+    const botonEditar = document.createElement("button");
+    botonEditar.type = "button";
+    botonEditar.innerHTML =
+      '<i class="fa-solid fa-pen-to-square"></i> Editar consulta';
+    botonEditar.classList.add("botonEditar");
+    resumen.appendChild(botonEditar);
+
+    botonEditar.addEventListener("click", () => {
+      nombre.value = datosConsulta.nombre;
+      correo.value = datosConsulta.correo;
+      telefono.value = datosConsulta.telefono;
+      localidad.value = datosConsulta.localidad;
+      equipo.value = datosConsulta.equipo;
+      servicio.value = datosConsulta.servicio;
+      descripcion.value = datosConsulta.descripcion;
+
+      resumen.classList.add("saliendo");
+
+      resumen.addEventListener(
+        "animationend",
+        () => {
+          resumen.remove();
+
+          document.querySelector(".formularioContacto").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        },
+        { once: true },
+      );
+    });
+
     //creacion html del resumen
     const resumenAnterior = document.querySelector(".resumenConsulta");
     if (resumenAnterior) {
-      resumenAnterior.remove;
+      resumenAnterior.remove();
     }
+
     formulario.insertAdjacentElement("afterend", resumen);
+
+    resumen.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
     //reseteamos el form
     formulario.reset();

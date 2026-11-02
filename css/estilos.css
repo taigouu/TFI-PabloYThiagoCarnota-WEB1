@@ -1003,14 +1003,9 @@ p.refSer {
     max-width: 42ch;
 }
 
-/* =========================================*/
-/*        PÁGINA DE CONTACTO           */
-/* ========================================= */
-
 
 /* =========================================*/
-/*        PÁGINA DE CONTACTO                */
-/* ========================================= */
+/* PÁGINA DE CONTACTO              /*========================================= */
 
 .seccionContacto {
     display: flex;
@@ -1219,6 +1214,21 @@ p.refSer {
     font-weight: bold;
 }
 
+.errorNombre,
+.errorCorreo,
+.errorTelefono,
+.errorLocalidad,
+.errorEquipo,
+.errorServicio,
+.errorDescripcion {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    line-height: 1.2;
+    font-size: 0.85rem;
+}
+
+
 #formContacto {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1297,4 +1307,111 @@ p.refSer {
 
 .botonEnviar:hover {
     background-color: var(--azul-oscuro);
+}
+
+.resumenConsulta {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: var(--fondo-celeste);
+    border: 2px solid var(--bordes);
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(6, 27, 97, 0.08);
+}
+
+.resumenConsulta h3 {
+    color: var(--azul-titulos);
+    font-size: 1.4rem;
+    margin: 0 0 20px;
+}
+
+.resumenConsulta p {
+    color: var(--texto-secundario);
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.botonWhatsApp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botonWhatsApp:hover {
+    background-color: #1da851;
+    transform: scale(1.05);
+}
+
+.botonEditar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 12px;
+    padding: 12px 20px;
+    background-color: var(--azul-botones);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botonEditar i {
+    margin-right: 8px;
+}
+
+.botonEditar:hover {
+    background-color: var(--azul-titulos);
+    transform: scale(1.05);
+}
+
+
+
+@keyframes aparecerResumen {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes desaparecerResumen {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.resumenConsulta {
+    animation: aparecerResumen 0.5s ease forwards;
+}
+
+.resumenConsulta.saliendo {
+    animation: desaparecerResumen 0.3s ease forwards;
+}
+
+.resumenConsulta,
+.formularioContacto {
+    scroll-margin-top: 120px;
 }
