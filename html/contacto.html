@@ -20,7 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <script src="JS/formulario.js" defer></script>
+    <script src="../js/formulario.js" defer></script>
   </head>
 
   <body>
@@ -132,14 +132,14 @@
             <h2>Completá tus datos</h2>
             <p>Te vamos a responder lo antes posible.</p>
 
-            <form method="post" id="formContacto">
+            <form method="post" id="formContacto" novalidate>
               <div class="nombre">
                 <label for="nombreForm">Nombre y apellido *</label>
                 <input
                   type="text"
                   id="nombreForm"
                   name="nombreForm"
-                  placeholder="Ej: Juan Gómez"
+                  placeholder="Ej: Juan Pérez"
                   required
                 />
                 <p class="errorNombre"></p>
