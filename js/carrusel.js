@@ -33,37 +33,84 @@ const imagenesCarrusel = [
 const botonAnterior = document.getElementById("anterior");
 const botonSiguiente = document.getElementById("siguiente");
 const imagenCarrusel = document.getElementById("imagenCarrusel");
-
+const imagenCarruselNueva = document.getElementById("imagenCarruselNueva");
+let imagenVisible = imagenCarrusel;
+let imagenOculta = imagenCarruselNueva;
 const descripcionCarrusel = document.getElementById("descripcionCarrusel");
 
 const contadorCarrusel = document.getElementById("contadorCarrusel");
 
 let indiceActual = 0;
+let cambiandoImagen = false;
 
 function actualizarCarrusel() {
-  imagenCarrusel.setAttribute("src", imagenesCarrusel[indiceActual].src);
-
-  imagenCarrusel.setAttribute("alt", imagenesCarrusel[indiceActual].alt);
-
   descripcionCarrusel.textContent = imagenesCarrusel[indiceActual].descripcion;
 
   contadorCarrusel.textContent = `${indiceActual + 1} / ${imagenesCarrusel.length}`;
 }
 
+function cambiarImagen() {
+  if (cambiandoImagen) return;
+
+  cambiandoImagen = true;
+
+  imagenOculta.setAttribute("src", imagenesCarrusel[indiceActual].src);
+  imagenOculta.setAttribute("alt", imagenesCarrusel[indiceActual].alt);
+
+  const informacion = document.querySelector(".infoCarrusel");
+
+  informacion.addEventListener(
+    "transitionend",
+    (evento) => {
+      if (evento.propertyName !== "opacity") return;
+
+      actualizarCarrusel();
+      informacion.classList.remove("desvaneciendo");
+    },
+    { once: true },
+  );
+
+  imagenVisible.addEventListener(
+    "transitionend",
+    (evento) => {
+      if (evento.propertyName !== "opacity") return;
+
+      let auxiliar = imagenVisible;
+      imagenVisible = imagenOculta;
+      imagenOculta = auxiliar;
+
+      cambiandoImagen = false;
+    },
+    { once: true },
+  );
+
+  informacion.classList.add("desvaneciendo");
+  imagenOculta.classList.add("imagenActiva");
+  imagenVisible.classList.remove("imagenActiva");
+}
+
 botonSiguiente.addEventListener("click", () => {
+  if (cambiandoImagen) return;
+
   indiceActual++;
+
   if (indiceActual >= imagenesCarrusel.length) {
     indiceActual = 0;
   }
-  actualizarCarrusel();
+
+  cambiarImagen();
 });
 
 botonAnterior.addEventListener("click", () => {
+  if (cambiandoImagen) return;
+
   indiceActual--;
+
   if (indiceActual < 0) {
     indiceActual = imagenesCarrusel.length - 1;
   }
-  actualizarCarrusel();
+
+  cambiarImagen();
 });
 
 actualizarCarrusel();
