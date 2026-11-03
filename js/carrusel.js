@@ -79,6 +79,10 @@ function cambiarImagen() {
       imagenVisible = imagenOculta;
       imagenOculta = auxiliar;
 
+      // Actualizamos cuál imagen está visible para lectores de pantalla
+      imagenVisible.removeAttribute("aria-hidden");
+      imagenOculta.setAttribute("aria-hidden", "true");
+
       cambiandoImagen = false;
     },
     { once: true },
