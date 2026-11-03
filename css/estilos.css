@@ -705,8 +705,9 @@ p.refSer {
 }
 
 .img-lateral {
-    width: 500px;
-    height: 500px;
+    width: min(30vw, 500px);
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border: 12px;
     box-shadow: 0 4px 15px rgba(6, 27, 97, 0.1);
@@ -727,6 +728,7 @@ p.refSer {
     justify-content: flex-start;
     padding-top: 0;
     margin-top: 0;
+    min-width: 0;
 }
 
 .textos h1 {
@@ -748,7 +750,7 @@ p.refSer {
     font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto 30px;
-    text-align: start;
+    text-align: center;
 }
 
 .iconos-beneficios {
@@ -1025,10 +1027,12 @@ p.refSer {
 }
 
 .unLista ul {
-    margin-top: 0px;
+    margin-top: 0;
+    padding-left: 25px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 10px;
     font-size: 1.3rem;
 }
 
@@ -1764,5 +1768,138 @@ p.refSer {
     .contenedorFooter h2 {
         margin-top: 10px;
         margin-bottom: 25px;
+    }
+}
+
+/*RESPONSIVE SERVICIOS*/
+/* sección hero */
+@media (max-width:1250px) {
+    .contenido-hero {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .contenido-central {
+        flex: 0 0 100%;
+        order: -1;
+    }
+
+    .img-lateral {
+        width: calc(50% - 15px);
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .textos h1 {
+        font-size: clamp(2rem, 4.5vw, 3rem);
+    }
+
+    .textos p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .iconos-beneficios {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .item-beneficio {
+        font-size: 1rem;
+    }
+
+}
+
+/* sección tarjetas de servicios */
+@media (max-width: 1100px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjetaAire {
+        min-height: 350px;
+    }
+
+    .tarjetasGenerales {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .tarjetaGeneral,
+    .tarjetaGeneral:nth-child(n+3) {
+        grid-column: span 1;
+    }
+
+    .tarjetaGeneral:last-child {
+        grid-column: 1 / -1;
+        width: 50%;
+        justify-self: center;
+    }
+}
+
+/* seccion cobertura */
+@media (max-width: 800px) {
+    .unLista ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1500px) {
+    .contenedorLoc {
+        grid-template-columns: 1fr;
+    }
+
+    .listaLoc {
+        margin-right: 55px;
+        max-width: 500px;
+        margin-left: 55px;
+    }
+
+    .contenedorLoc {
+        grid-template-columns: 1fr;
+    }
+
+    .contDer {
+        display: none;
+    }
+
+    .contIzq {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 clamp(25px, 5vw, 80px);
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    .txtIzq,
+    .listaLoc,
+    .txtFinalLoc {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .seccionLocalidades {
+        background-image: url("../imagenes/localidadesInicio.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 90% auto;
+        padding-bottom: 35vw;
+
+    }
+
+    .txtFinalLoc {
+        margin-top: 0px;
+        margin-bottom: 40px;
+        gap: 8px;
+    }
+
+    .txtFinalLoc p {
+        font-size: 1.15rem;
     }
 }
