@@ -1109,7 +1109,6 @@ p.refSer {
     max-width: 35ch;
 }
 
-/* TARJETAS DE CONTACTO */
 
 .tarjetasContenedor {
     margin-top: 50px;
@@ -1159,7 +1158,6 @@ p.refSer {
     font-size: 1.6rem;
 }
 
-/* ÍCONOS GENERALES */
 
 .panelContacto .icono {
     width: 94px;
@@ -1171,7 +1169,7 @@ p.refSer {
     box-sizing: border-box;
 }
 
-/* Círculos de WhatsApp y teléfono */
+
 
 .panelContacto .icono:not(.iconoRedes) {
     background-color: transparent;
@@ -1193,7 +1191,6 @@ p.refSer {
     z-index: 1;
 }
 
-/* REDES SOCIALES */
 
 .panelContacto .iconoRedes {
     width: 94px;
@@ -1921,6 +1918,31 @@ p.refSer {
         letter-spacing: 4px;
         gap: 10px;
         margin-bottom: 30px;
+    }
+
+}
+
+
+/* PÁGINA DE CONTACTO */
+
+@media (max-width: 1100px) {
+    .panelContacto {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    #formContacto>div>label {
+        min-height: 2.4em;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .nombre:nth-child(1) label,
+    .correo label {
+        font-size: 0.9rem;
     }
 
 }

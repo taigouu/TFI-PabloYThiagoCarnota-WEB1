@@ -5,6 +5,23 @@ const telefono = document.getElementById("telefonoForm");
 const localidad = document.getElementById("localidadForm");
 const equipo = document.getElementById("equipoForm");
 const servicio = document.getElementById("servicioForm");
+
+const breakpointMovil = window.matchMedia("(max-width: 600px)");
+
+function actualizarTextoSelectores() {
+  if (breakpointMovil.matches) {
+    equipo.options[0].textContent = "Elegí equipo";
+    servicio.options[0].textContent = "Elegí servicio";
+  } else {
+    equipo.options[0].textContent = "Seleccioná un equipo";
+    servicio.options[0].textContent = "Selecciona un servicio";
+  }
+}
+
+actualizarTextoSelectores();
+
+breakpointMovil.addEventListener("change", actualizarTextoSelectores);
+
 const descripcion = document.getElementById("descripcionForm");
 
 const errorNombre = document.querySelector(".errorNombre");
@@ -185,10 +202,26 @@ formulario.addEventListener("submit", (evento) => {
         () => {
           resumen.remove();
 
-          document.querySelector(".formularioContacto").scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
+          const formularioContacto = document.querySelector(
+            ".formularioContacto",
+          );
+
+          if (window.matchMedia("(max-width: 600px)").matches) {
+            const posicion =
+              formularioContacto.getBoundingClientRect().top +
+              window.scrollY -
+              140;
+
+            window.scrollTo({
+              top: posicion,
+              behavior: "smooth",
+            });
+          } else {
+            formularioContacto.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
         },
         { once: true },
       );
@@ -202,10 +235,20 @@ formulario.addEventListener("submit", (evento) => {
 
     formulario.insertAdjacentElement("afterend", resumen);
 
-    resumen.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      const posicion =
+        resumen.getBoundingClientRect().top + window.scrollY - 160;
+
+      window.scrollTo({
+        top: posicion,
+        behavior: "smooth",
+      });
+    } else {
+      resumen.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
 
     //reseteamos el form
     formulario.reset();
