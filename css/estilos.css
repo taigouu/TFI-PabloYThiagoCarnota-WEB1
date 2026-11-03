@@ -31,7 +31,10 @@
     /*Tarjetas y fondos*/
 }
 
+
+
 body {
+    background-color: #F8FCFF;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -150,7 +153,9 @@ p.refSer {
     margin-bottom: 10px;
     color: var(--texto-secundario);
     font-weight: 900;
+
 }
+
 
 .presentacion h1 {
     color: var(--azul-titulos);
@@ -170,6 +175,8 @@ p.refSer {
     margin-top: 10px;
     margin-bottom: 0;
 }
+
+
 
 .botonesConsultas {
     margin-top: 45px;
@@ -229,6 +236,8 @@ p.refSer {
     justify-content: center;
     gap: 30px;
     max-width: 1500px;
+    padding: 0 30px;
+    box-sizing: border-box;
     margin: 0 auto;
     margin-bottom: 100px;
 }
@@ -253,6 +262,7 @@ p.refSer {
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 0px;
+    text-align: center;
 }
 
 .tarjetaServicio p {
@@ -288,27 +298,35 @@ p.refSer {
     margin-bottom: 15px;
 }
 
+.textoPresentacion h1 {
+    -webkit-text-stroke: 0.5px white;
+}
+
 .contenedorSeccion3 {
     background-color: var(--fondo-iconos);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr);
     align-items: center;
+    gap: 40px;
     max-width: 1800px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 60px 40px;
+    box-sizing: border-box;
 }
 
 .textosSeccion3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 0;
 }
+
 
 .textosSeccion3 h2 {
     color: var(--azul-titulos);
     max-width: 10ch;
-    font-size: 6rem;
-    margin-top: 0px;
+    font-size: clamp(3rem, 5vw, 6rem);
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
@@ -331,40 +349,32 @@ p.refSer {
 .carrusel {
     display: flex;
     align-items: center;
-    gap: 20px;
-}
-
-.carrusel img {
-    width: 1000px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 16px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    gap: 15px;
+    min-width: 0;
+    width: 100%;
 }
 
 .contenedorImagenes {
     position: relative;
-    width: 1000px;
-    height: 500px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+    border-radius: 16px;
 }
 
 .contenedorImagenes img {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
     opacity: 0;
-    transition: opacity 0.7s ease;
+    transition: opacity 0.4s ease;
 }
 
 .contenedorImagenes .imagenActiva {
     opacity: 1;
-}
-
-.contenedorImagenes img {
-    transition: opacity 0.4s ease;
 }
 
 .infoCarrusel {
@@ -376,11 +386,12 @@ p.refSer {
 }
 
 .carrusel button {
+    flex: 0 0 45px;
+    width: 45px;
+    height: 45px;
     background-color: var(--azul-oscuro);
     border: 1px solid var(--blanco);
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
     cursor: pointer;
     font-size: 18px;
     color: var(--blanco);
@@ -398,7 +409,9 @@ p.refSer {
 .visorCarrusel {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    flex: 1;
+    min-width: 0;
     gap: 12px;
 }
 
@@ -426,7 +439,7 @@ p.refSer {
     background-image: url("../imagenes/localidadesInicio.png");
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: 60%;
+    background-size: 62%;
     width: auto;
 }
 
@@ -436,9 +449,11 @@ p.refSer {
     padding: 80px 20px;
     display: flex;
     align-items: center;
+    padding-top: 20px;
 }
 
 .textosSeccion4 {
+    width: 48%;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -447,8 +462,8 @@ p.refSer {
 
 .etiquetaCobertura {
     color: var(--texto-secundario);
-    font-size: 1rem;
-    max-width: 25ch;
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    max-width: clamp(18ch, 22vw, 25ch);
     margin-top: 10px;
     opacity: 1;
     margin-bottom: 10px;
@@ -456,17 +471,19 @@ p.refSer {
 
 .contenedorSeccion4 h2 {
     color: var(--azul-titulos);
-    font-size: 3rem;
+    font-size: clamp(2rem, 3.5vw, 3rem);
     margin-top: 15px;
     margin-bottom: 10px;
+    max-width: clamp(9ch, 30vw, 16ch);
 }
 
 .descripcionCobertura {
     color: var(--azul-titulos);
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 1.5vw, 11.4rem);
     margin-top: 15px;
     opacity: 1;
     margin-bottom: 45px;
+    max-width: clamp(22ch, 35vw, 38ch);
 }
 
 .descripcionCobertura strong {
@@ -475,8 +492,8 @@ p.refSer {
 
 .bloqueBoton a {
     margin-top: 45px;
-    font-size: 1.6rem;
-    padding: 15px;
+    font-size: clamp(1rem, 1.3vw, 1.6rem);
+    padding: clamp(9px, 1vw, 15px);
     border: 2.5px solid var(--azul-botones);
     border-radius: 10px;
     text-decoration: none;
@@ -1450,6 +1467,9 @@ p.refSer {
     scroll-margin-top: 120px;
 }
 
+
+
+
 /* RESPONSIVE INICIO */
 
 @media (max-width: 768px) {
@@ -1498,6 +1518,7 @@ p.refSer {
     .presentacion h1 {
         font-size: clamp(2.5rem, 9vw, 4rem);
         color: var(--blanco);
+
     }
 
     .presentacion .infoChica {
@@ -1510,6 +1531,11 @@ p.refSer {
         margin-left: 0;
         font-size: 0.9rem;
         color: var(--bordes);
+
+    }
+
+    p.infoChica {
+        -webkit-text-stroke: 0;
     }
 
     .botonesConsultas {
@@ -1568,10 +1594,10 @@ p.refSer {
     }
 
     .contenedorSeccion3 {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 30px;
         padding: 40px 20px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     .textosSeccion3 h2 {
@@ -1585,7 +1611,7 @@ p.refSer {
 
     .carrusel {
         width: 100%;
-        gap: 8px;
+        gap: 5px;
     }
 
     .visorCarrusel {
@@ -1593,17 +1619,11 @@ p.refSer {
         flex: 1;
     }
 
-    .contenedorImagenes {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 2 / 1;
-    }
-
     .carrusel button {
-        flex-shrink: 0;
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
     }
 
     .infoCarrusel {
@@ -1622,10 +1642,24 @@ p.refSer {
     }
 
     .contenedorSeccion4 {
-        margin-left: 0;
-        padding: 50px 20px;
-        margin-top: 0px;
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        padding: 40px 25px;
+        box-sizing: border-box;
     }
+
+    .textosSeccion4 {
+        width: 100%;
+        max-width: none;
+    }
+
+    .etiquetaCobertura,
+    .contenedorSeccion4 h2,
+    .descripcionCobertura {
+        max-width: none;
+    }
+
 
     .contenedorSeccion4 h2 {
         font-size: 2rem;
@@ -1705,24 +1739,30 @@ p.refSer {
         line-height: 1.5;
     }
 
-    .carrusel {
-        width: 100%;
-        gap: 5px;
-    }
 
     .contenedorImagenes {
         width: 100%;
         aspect-ratio: 1.6 / 1;
     }
 
-    .carrusel button {
-        width: 32px;
-        height: 32px;
-        font-size: 13px;
-    }
-
 
     .trabajos {
         margin-bottom: 0;
+    }
+
+    .contenedorFooter .contenedorBotones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedorLinks {
+        display: flex;
+        align-items: center;
+    }
+
+    .contenedorFooter h2 {
+        margin-top: 10px;
+        margin-bottom: 25px;
     }
 }
