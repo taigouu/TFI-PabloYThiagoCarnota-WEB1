@@ -1838,6 +1838,16 @@ p.refSer {
         width: 50%;
         justify-self: center;
     }
+
+    .tarjetaGeneral h1 {
+        font-size: 1.2rem;
+    }
+
+
+
+    .tarjetaGeneral:nth-last-child(2) p {
+        font-size: 1rem;
+    }
 }
 
 /* seccion cobertura */
