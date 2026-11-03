@@ -1772,6 +1772,7 @@ p.refSer {
 }
 
 /*RESPONSIVE SERVICIOS*/
+
 /* sección hero */
 @media (max-width:1250px) {
     .contenido-hero {
@@ -1902,4 +1903,14 @@ p.refSer {
     .txtFinalLoc p {
         font-size: 1.15rem;
     }
+}
+
+@media (max-width: 768px) {
+    .tituloMarca {
+        font-size: clamp(2.2rem, 9vw, 3.5rem);
+        letter-spacing: 4px;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
 }
